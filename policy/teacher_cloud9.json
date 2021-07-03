@@ -1,0 +1,32 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "cloud9:DescribeEnvironmentMemberships",
+            "Resource": "arn:aws:cloud9:ap-northeast-2:*:environment:*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "cloud9:ListEnvironments",
+                "cloud9:CreateEnvironmentEC2"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": "cloud9:ListTagsForResource",
+            "Resource": "arn:aws:cloud9:*:*:environment:*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "cloud9:DeleteEnvironmentMembership",
+                "cloud9:UpdateEnvironmentMembership",
+                "cloud9:CreateEnvironmentMembership"
+            ],
+            "Resource": "arn:aws:cloud9:*:*:environment:*"
+        }
+    ]
+}

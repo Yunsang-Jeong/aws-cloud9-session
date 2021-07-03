@@ -1,0 +1,37 @@
+{
+    "teacher": {
+        "headcount": 1,
+        "name_fmt": "teacher{:02d}",
+        "pass": "Rudska123!@#",
+        "group": "c9-session-teacher"
+    },
+    "student": {
+        "headcount": 10,
+        "name_fmt": "student{:02d}",
+        "pass": "Rudska123!@#",
+        "group": "c9-session-student"
+    },
+    "group": [{
+        "name": "c9-session-teacher",
+        "policy": [{
+            "name": "adminaccess",
+            "filename": "teacher_all.json"
+        }]
+    },{
+        "name": "c9-session-student",
+        "policy": [{
+            "name": "access-to-cloud9",
+            "filename": "student_cloud9.json"
+        },{
+            "name": "access-to-s3",
+            "filename": "student_s3.json"
+        },{
+            "name": "access-to-securitygroup",
+            "filename": "security-group.json"
+        }]
+    }],
+    "cloud9_project": {
+        "instance_type": "t3.small",
+        "project_name_fmt": "coding-class-{}"
+    }
+}
